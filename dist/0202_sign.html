@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>자기주도학습역량케어(SDLC)</title>
+    <link rel="stylesheet" href="./assets/css/default.css"/>
+  </head>
+  <body>
+    <!-- header-->
+    <header class="is-desktop is-hidden-mobile">
+      <div class="container">
+        <div class="logo"><a href="#"><img src="./assets/img/wecaning_logo.png" alt="위캐닝"/></a></div>
+        <div class="menu">
+          <nav class="main"><a href="#">자기주도학습역량케어<i>(SDLC)</i> 란?</a><a href="#">신청하기</a><a href="#">진단하기</a><a href="#">체크리스트</a><a href="#">마이페이지</a></nav>
+          <nav class="utils"><a href="#">회원가입</a><a href="#">로그인</a><a href="#">고객센터</a></nav>
+        </div>
+      </div>
+    </header>
+    <header class="is-mobile is-hidden-tablet">
+      <div class="container">
+        <div class="menu"><a class="back" href="#"><img src="./assets/img/icon_back.png"/></a><a class="main" href="#"><img src="./assets/img/icon_menu.png"/></a></div>
+        <div class="logo"><a href="#"><img src="./assets/img/wecaning_logo.png" alt="위캐닝"/></a></div>
+      </div>
+    </header>
+    <!-- main content-->
+    <nav class="breadcrumb is-hidden-mobile">
+      <div class="container">
+        <ul>
+          <li><a href="/">홈</a></li>
+          <li><span>회원가입</span></li>
+          <li class="is-active"><span>가입정보 입력</span></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="accounts">
+      <div class="container is-fluid is-half">
+        <h1 class="page-title">가입정보 입력</h1>
+        <div class="message is-link">
+          <div class="message-body">
+            <p>학부모 정보로 가입하여 주세요.</p>
+          </div>
+        </div>
+        <form>
+          <div class="field">
+            <label class="label">아이디</label>
+            <div class="field is-grouped is-child">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="6~10자리의 영문/숫자"/>
+              </p>
+              <p class="control"><a class="button is-link">중복체크</a></p>
+            </div>
+            <p class="help is-success">가입 가능한 아이디입니다.</p>
+            <p class="help is-danger">이미 가입된 아이디입니다.</p>
+            <p class="help is-danger">아이디가 규칙에 맞지 않습니다.</p>
+          </div>
+          <div class="field">
+            <label class="label">비밀번호</label>
+            <div class="control">
+              <input class="input" type="password" placeholder="6~15자리의 영문+숫자+특수문자 조합"/>
+              <p class="help is-danger">비밀번호가 규칙에 맞지 않습니다.</p>
+            </div>
+            <div class="control">
+              <input class="input" type="password" placeholder="비밀번호 재입력"/>
+              <p class="help is-danger">비밀번호가 일치하지 않습니다.</p>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">이름</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="이름"/>
+            </div>
+            <p class="help is-danger">필수 정보입니다.</p>
+          </div>
+          <div class="field">
+            <label class="label">이메일</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="이메일"/>
+            </div>
+            <p class="help is-danger">이미 가입된 정보입니다.</p>
+            <p class="help is-danger">필수 정보입니다.</p>
+            <p class="help">비밀번호 찾기시 이용됩니다. 수신이 가능한 메일주소를 적어주세요.</p>
+          </div>
+          <div class="field">
+            <label class="label">휴대폰 번호</label>
+            <div class="field is-grouped is-child">
+              <p class="control is-expanded">
+                <input class="input" type="number" pattern="\d*" placeholder="휴대폰 번호"/>
+              </p>
+              <p class="control"><a class="button is-link">인증번호 발송</a></p>
+            </div>
+            <p class="help">휴대폰으로 인증번호를 문자로 발송합니다.</p>
+            <p class="help is-danger">이미 가입된 정보입니다.</p>
+            <p class="help is-danger">필수 정보입니다.</p>
+            <div class="field is-grouped is-child mt-3">
+              <p class="control is-expanded"><span class="remaining">03:00</span>
+                <input class="input" type="number" pattern="\d*" placeholder="인증번호 입력"/>
+              </p>
+              <p class="control"><a class="button is-success">인증번호확인</a></p>
+            </div>
+            <p class="help">휴대폰 문자로 수신된 인증번호(숫자6자리)를 입력하여 주세요.</p>
+            <p class="help is-danger">인증번호가 일치하지 않습니다. 수신된 인증번호를 확인 후 입력해주세요.</p>
+          </div>
+          <div class="field">
+            <label class="label">지역코드</label>
+            <div class="select">
+              <select>
+                <option value="" selected="selected" disabled="disabled">지역을 선택해주세요</option>
+                <option value="">서울</option>
+                <option value="">경기</option>
+              </select>
+            </div>
+            <p class="help">필수 정보입니다.</p>
+          </div>
+          <div class="message is-danger">
+            <div class="message-body">
+              <p>이미 가입된 정보입니다.</p>
+              <p>입력정보를 확인 후 다시 입력하여 주세요.</p>
+            </div>
+          </div>
+        </form>
+        <div class="buttons is-centered"><a class="button is-light is-wide">취소</a><a class="button is-primary is-wide">회원가입</a></div>
+      </div>
+    </main>
+    <!-- footer-->
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer-menu"><a href="#">서비스 이용약관</a><a href="#">개인정보취급방침</a><a href="#">자주하는 질문</a><a href="#">문의하기</a><a href="#">공지사항</a><a href="#">구매제휴문의</a></nav>
+        <div class="footer-body">
+          <div class="info"><span class="company-name">㈜위캔엘티디</span><span>
+              <address>안양시 동안구 학의로 282 금강펜테리움IT타워 411호</address></span><span>대표 : 이승훈</span><span>사업자 등록번호 : 144-81-16397</span><span>통신판매업 : 제 C-2014-005567호</span><span class="copyright">©위캔엘티디. All Rights Reserved.</span></div>
+          <div class="links">
+            <div class="sns"><a href="#"><img src="./assets/img/sns_facebook.png" alt="페이스북"/></a><a href="#"><img src="./assets/img/sns_naver.png" alt="네이버"/></a></div>
+            <div class="select is-rounded is-small">
+              <select class="related-site">
+                <option value="" selected="selected" disabled="disabled">관련 웹사이트</option>
+                <option value="https://www.naver.com">네이버</option>
+                <option value="https://www.naver.com">네이버</option>
+                <option value="https://www.naver.com">네이버</option>
+              </select>
+            </div>
+            <div class="partners">
+              <p>협력사</p><img src="./assets/img/partners.png" alt="엘지유플러스 아이들나라, 네이버 부모아이"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/common.js"></script>
+  </body>
+</html>
