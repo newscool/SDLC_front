@@ -1,3 +1,34 @@
+// 체크리스트 진행상황 프로그레스바 width 설정
+// .bar-child의 data-width 속성 사용
+const checkListProgressBar = document.querySelector('.bar-child');
+if (checkListProgressBar) {
+  const width = checkListProgressBar.getAttribute('data-width');
+  checkListProgressBar.style.width = width + '%';
+}
+
+// 체크리스트 textarea 글자수 체크
+const textLimitChecker = document.querySelectorAll('.text-limit');
+if (textLimitChecker) {
+  textLimitChecker.forEach(function (item) {
+    const textArea = item.parentNode.querySelector('textarea');
+    const currentText = item.querySelector('.current');
+    textArea.addEventListener('keyup', function (e) {
+      const textLength = e.target.value.length;
+      currentText.innerText = textLength;
+    })
+  })
+}
+
+// 미션 달성률 설정
+const ratings = document.querySelectorAll('.starrr');
+if (ratings) {
+  $(".starrr").starrr({
+    change: function (e, value) {
+      const rating = (value ? value : 0) * 20;
+      e.currentTarget.parentNode.querySelector('p').innerHTML = '<b>' + rating + '%</b> 달성하였습니다!';
+    }
+  });
+}
 // default.js
 
 if (window.NodeList && !NodeList.prototype.forEach) {

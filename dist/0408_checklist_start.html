@@ -26,32 +26,52 @@
       </div>
     </header>
     <!-- main content-->
-    <main class="login">
-      <div class="container is-fluid">
-        <h1 class="page-title">학습자 로그인</h1>
-        <form>
+    <nav class="breadcrumb is-hidden-mobile">
+      <div class="container">
+        <ul>
+          <li><a href="/">홈</a></li>
+          <li><span>자기주도학습역량케어</span></li>
+          <li class="is-active"><span>체크리스트 시작</span></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="accounts">
+      <div class="container is-fluid is-half">
+        <h1 class="page-title">체크리스트 시작</h1>
+        <div class="message">
+          <div class="message-body">
+            <ol> 
+              <li>자기주도학습역량케어솔루션은 12주 동안 진행되며, 매주 수행 할 체크리스트가 주어집니다. </li>
+              <li>체크리스트내에 주어진 미션(2~15개)을 7일(168시간) 동안 진행하고 기록하여 주세요.</li>
+              <li>기간 내에 체크리스트를 모두 완료하시길 권장하며 제출되지 않더라도 기간이 경과되면 다음 주 체크리스트로 자동으로 넘어갑니다.</li>
+              <li>자기주도학습역량케어솔루션 체크리스트의 진행과정에서 두뇌유형검사(3~4주차), 지능검사(7~8주차), 수학학력평가(11~12주차)가 추가로 제공됩니다.</li>
+              <li class="has-text-danger">체크리스트는 시작 후에는 취소가 되지 않으며, 진행기간 동안 중단되지 않으오니 시작하기전 일정을 꼭 확인 후 진행하여 주세요.</li>
+            </ol>
+          </div>
+        </div>
+        <hr class="is-blank"/>
+        <form class="mb-5">
           <div class="field">
-            <label class="label">학습자명</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="이름"/>
-            </div>
-            <p class="help">이름을 입력해주세요.</p>
-          </div>
-          <div class="field">
-            <label class="label">학습자코드</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="6자리의 영문/숫자 형태의 코드"/>
-            </div>
-            <p class="help">학습자코드는 <b>로그인>마이페이지>학습자정보수정</b>에서 확인 가능합니다.</p>
-          </div>
-          <div class="message is-danger">
-            <div class="message-body">
-              <p>입력하신 정보와 일치하는 학습자를 찾을 수 없습니다.</p>
-              <p>학습자코드를 확인 후 다시 입력해 주세요.</p>
+            <label class="label">체크리스트를 진행할 학습자를 선택합니다.</label>
+            <div class="select">
+              <select>
+                <option value="" selected="selected" disabled="disabled">학습자를 선택하세요</option>
+                <option value="">김철수</option>
+                <option value="">김영이</option>
+              </select>
             </div>
           </div>
-          <div class="buttons are-medium is-centered"><a class="button is-light">취소</a><a class="button is-link">확인</a></div>
         </form>
+        <div class="list-info">
+          <ul class="table-list">
+            <li><span class="name">성별</span><span class="value">여자</span></li>
+            <li><span class="name">학년</span><span class="value">중학교 1학년</span></li>
+          </ul>
+        </div>
+        <div class="block has-text-centered">
+          <p class="title is-6">지금부터 선택된 학습자의 자기주도학습역량케어 솔루션을 시작하시겠습니까?</p>
+        </div>
+        <div class="buttons is-centered"><a class="button is-primary is-wide">확인</a></div>
       </div>
     </main>
     <!-- footer-->

@@ -26,32 +26,35 @@
       </div>
     </header>
     <!-- main content-->
-    <main class="login">
+    <nav class="breadcrumb is-hidden-mobile">
+      <div class="container">
+        <ul>
+          <li><a href="/">홈</a></li>
+          <li><span>자기주도학습역량케어</span></li>
+          <li class="is-active"><span>체크리스트 완료</span></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="checklist">
       <div class="container is-fluid">
-        <h1 class="page-title">학습자 로그인</h1>
-        <form>
-          <div class="field">
-            <label class="label">학습자명</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="이름"/>
-            </div>
-            <p class="help">이름을 입력해주세요.</p>
-          </div>
-          <div class="field">
-            <label class="label">학습자코드</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="6자리의 영문/숫자 형태의 코드"/>
-            </div>
-            <p class="help">학습자코드는 <b>로그인>마이페이지>학습자정보수정</b>에서 확인 가능합니다.</p>
-          </div>
-          <div class="message is-danger">
-            <div class="message-body">
-              <p>입력하신 정보와 일치하는 학습자를 찾을 수 없습니다.</p>
-              <p>학습자코드를 확인 후 다시 입력해 주세요.</p>
+        <h1 class="page-title">체크리스트 완료</h1>
+        <hr class="is-blank"/>
+        <div class="coach-message"> 
+          <div class="box"> 
+            <h2> 
+              <div class="img"> <img src="./assets/img/thumbnail_no.png" alt="노규식박사님"/></div><span>두뇌교육전문가<br/><b>노규식박사님</b>의 메시지</span>
+            </h2>
+            <div class="message is-success"> 
+              <div class="message-body is-complete">
+                <p>정말 훌륭하게 미션을 수행하셨습니다. 미션이 간단해 보여도 결코 쉽지만은 않습니다. </p>
+                <p>이미 당신은 자기주도적 학습능력을 가진 자녀를 키울 수 있는 능력을 충분히 가지고 있을 것으로 보입니다. </p>
+                <p>앞으로 이렇게 계속 미션을 시도하시면 점점 더 능숙하고 자신감 있는 부모가 되실 것입니다. </p>
+                <p>끊임없이 노력하고 새로운 것을 시도하고 점차 발전하는 모습은 자녀들에게 그 자체로도 훌륭한 모범이 될 것이 틀림없습니다. </p>
+              </div>
             </div>
           </div>
-          <div class="buttons are-medium is-centered"><a class="button is-light">취소</a><a class="button is-link">확인</a></div>
-        </form>
+        </div>
+        <div class="buttons is-centered"><a class="button is-primary is-wide">자기주도학습역량케어 재신청</a></div>
       </div>
     </main>
     <!-- footer-->
