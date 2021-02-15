@@ -8,7 +8,7 @@ if (checkListProgressBar) {
 
 // 체크리스트 textarea 글자수 체크
 const textLimitChecker = document.querySelectorAll('.text-limit');
-if (textLimitChecker) {
+if (textLimitChecker.length) {
   textLimitChecker.forEach(function (item) {
     const textArea = item.parentNode.querySelector('textarea');
     const currentText = item.querySelector('.current');
@@ -21,7 +21,7 @@ if (textLimitChecker) {
 
 // 미션 달성률 설정
 const ratings = document.querySelectorAll('.starrr');
-if (ratings) {
+if (ratings.length) {
   $(".starrr").starrr({
     change: function (e, value) {
       const rating = (value ? value : 0) * 20;
