@@ -82,6 +82,72 @@ if (checkAll) {
     }
   })
 }
+
+// 학습자 정보 수정 : 코드 복사
+const codeCopyButton = document.querySelector('.button-code-copy');
+if (codeCopyButton) {
+  const clipboard = new ClipboardJS('.button-code-copy');
+  clipboard.on('success', function (e) {
+    console.log(e);
+    alert('코드가 복사되었습니다.');
+  })
+  clipboard.on('error', function (e) {
+    console.log(e);
+  })
+}
+
+
+// 학습자 정보 수정 : 학교 검색
+const buttonSearchSchool = document.querySelector('.button-search-school');
+if (buttonSearchSchool) {
+  const modal = document.querySelector('.modal');
+  const closes = [document.querySelector('.modal-background'), document.querySelector('.delete'), document.querySelector('.button-close')];
+
+  buttonSearchSchool.addEventListener('click', function (e) {
+    console.log(e);
+    modal.classList.add('is-active');
+  })
+
+  closes.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      modal.classList.remove('is-active');
+    })
+  })
+}
+
+// 학습자 정보 수정 : 학년 설정
+const selectClass = document.querySelector('input[name=selectClass]');
+if (selectClass) {
+  const select = document.querySelector('#classSelect');
+  // 초등학교 학년
+  const class1 = [3, 4, 5, 6];
+  // 중학교 학년
+  const class2 = [1, 2, 3];
+
+  document.querySelectorAll('input[name=selectClass]').forEach(function (item) {
+    item.addEventListener('change', function (e) {
+      if (e.target.value === 'class1') {
+        select.options.length = 0;
+        class1.forEach(function (item) {
+          const element = document.createElement('option');
+          element.text = '초등학교 ' + item + '학년';
+          element.value = 'a' + item;
+          select.options.add(element);
+          select.disabled = false;
+        })
+      } else {
+        select.options.length = 0;
+        class2.forEach(function (item) {
+          const element = document.createElement('option');
+          element.text = '중학교 ' + item + '학년';
+          element.value = 'a' + item;
+          select.options.add(element);
+          select.disabled = false;
+        })
+      }
+    })
+  })
+}
 // mobile.js
 
 // button: mobile history back
