@@ -148,6 +148,27 @@ if (selectClass) {
     })
   })
 }
+
+function removeAnswerIsActive() {
+  const items = document.querySelectorAll('.answer-body');
+  items.forEach(function(elem) {
+    elem.classList.remove('is-active');
+  })
+}
+
+const questionList = document.querySelector('.question');
+if(questionList) {
+  const question = questionList.querySelectorAll('a');
+  question.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      const target = e.currentTarget.querySelector('.answer-body');
+      if(target) {
+        removeAnswerIsActive();
+        target.classList.add('is-active');
+      }
+    }, true)
+  })
+}
 // mobile.js
 
 // button: mobile history back
