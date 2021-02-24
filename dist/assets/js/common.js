@@ -149,6 +149,7 @@ if (selectClass) {
   })
 }
 
+// 문의내역 클릭 이벤트
 function removeAnswerIsActive() {
   const items = document.querySelectorAll('.answer-body');
   items.forEach(function(elem) {
@@ -158,16 +159,13 @@ function removeAnswerIsActive() {
 
 const questionList = document.querySelector('.question');
 if(questionList) {
-  const question = questionList.querySelectorAll('a');
-  question.forEach(function(item) {
-    item.addEventListener('click', function(e) {
-      const target = e.currentTarget.querySelector('.answer-body');
+  questionList.addEventListener('click', function(e) {
+      const target = e.target.querySelector('.answer-body');
       if(target) {
         removeAnswerIsActive();
         target.classList.add('is-active');
       }
-    }, true)
-  })
+  },)
 }
 // mobile.js
 
