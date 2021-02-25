@@ -1,3 +1,7 @@
+# 20210225
+  - [*] Desktop 서브메뉴 구현(0101_about_wecaning.html 참고)
+  - [*] Mobile 서브메뉴 구현(0101_about_wecaning.html 참고)
+
 # 20210221
   - [*] 서비스내역
 

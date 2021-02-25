@@ -38,6 +38,7 @@ if (window.HTMLCollection && !HTMLCollection.prototype.forEach) {
   HTMLCollection.prototype.forEach = Array.prototype.forEach;
 }
 
+
 // footer: 관련 웹사이트 이동
 const relatedSite = document.querySelector('.related-site');
 if (relatedSite) {
@@ -174,5 +175,21 @@ const menuBack = document.querySelector('.menu .back');
 if (menuBack) {
     menuBack.addEventListener('click', function () {
         window.history.back();
+    })
+}
+
+// 모바일 메뉴
+const mobileSideMenu = document.querySelector('.submenu-mobile');
+if(mobileSideMenu) {
+    const hamberger = document.querySelector('header.is-mobile .main');
+    hamberger.addEventListener('click', function(e) {
+        mobileSideMenu.classList.add('is-active');
+        document.querySelector('body').classList.add('menu-open');
+    })
+
+    const close = document.querySelector('.close');
+    close.addEventListener('click', function(e) {
+        mobileSideMenu.classList.remove('is-active');
+        document.querySelector('body').classList.remove('menu-open');
     })
 }
