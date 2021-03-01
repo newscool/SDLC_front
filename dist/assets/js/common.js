@@ -168,6 +168,26 @@ if(questionList) {
       }
   },)
 }
+
+// 메인 슬라이더
+$(function() {
+  $('.slider').slick({
+    dots: true,
+    infinite: true,
+    adaptiveHeight: true,
+    autoplay: true,
+    arrows: true,
+    speed: 1000,
+  });
+})
+
+// 위캐닝 소개 : breadcrumb add 'is-white'
+const about = document.querySelector('.cscenter');
+about.classList.forEach(item => {
+  if(item == 'is-about') {
+    document.querySelector('.breadcrumb').classList.add('is-white');
+  }
+})
 // mobile.js
 
 // button: mobile history back
