@@ -214,4 +214,15 @@ if(mobileSideMenu) {
         mobileSideMenu.classList.remove('is-active');
         document.querySelector('body').classList.remove('menu-open');
     })
+
+    // 스크롤이 100px 이상일때 fixed
+    window.addEventListener('scroll', function() {
+        if(window.scrollY > 100) {
+            document.querySelector('header.is-mobile').classList.add('is-fixed');
+            document.querySelector('body').classList.add('header-padding-top');
+        }else{
+            document.querySelector('header.is-mobile').classList.remove('is-fixed');
+            document.querySelector('body').classList.remove('header-padding-top');
+        }
+    } );
 }
