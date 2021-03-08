@@ -175,7 +175,7 @@ $(function() {
     dots: true,
     infinite: true,
     adaptiveHeight: true,
-    // autoplay: true,
+    autoplay: true,
     arrows: true,
     speed: 400,
   });
