@@ -152,7 +152,7 @@ if (selectClass) {
 
 // 문의내역 클릭 이벤트
 function removeAnswerIsActive() {
-  const items = document.querySelectorAll('.answer-body');
+  const items = document.querySelectorAll('.question a');
   items.forEach(function(elem) {
     elem.classList.remove('is-active');
   })
@@ -161,10 +161,11 @@ function removeAnswerIsActive() {
 const questionList = document.querySelector('.question');
 if(questionList) {
   questionList.addEventListener('click', function(e) {
+      removeAnswerIsActive();
       const target = e.target.querySelector('.answer-body');
       if(target) {
-        removeAnswerIsActive();
-        target.classList.add('is-active');
+        console.log(target.parentNode);
+        target.parentNode.classList.add('is-active');
       }
   },)
 }
