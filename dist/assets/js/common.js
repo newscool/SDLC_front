@@ -191,6 +191,36 @@ if(about) {
     }
   })
 }
+// 서비스 구매 프로세스
+let selectedProduct = '';
+
+function deactivateBox() {
+  document.querySelectorAll('.product-list .box').forEach(item => {
+    item.classList.remove('is-active');
+  })
+}
+
+const products = document.querySelectorAll('.product-list .button');
+const payButton = document.querySelector('.confirm .button');
+if(products.length) {
+  products.forEach((item, index) => {
+    item.addEventListener('click', function() {
+      deactivateBox();
+      selectedProduct = index;
+      console.log('[상품선택]', index);
+      item.parentNode.parentNode.classList.add('is-active');
+    })
+  })
+
+  payButton.addEventListener('click', function() {
+    if(selectedProduct === '') {
+      alert('구매하실 서비스를 선택해주세요.');
+    }else{
+      console.log('[결제진행]', selectedProduct);
+      // 구매 프로세스
+    }
+  })
+}
 // mobile.js
 
 // button: mobile history back
