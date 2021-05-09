@@ -14,7 +14,7 @@
       <div class="container">
         <div class="logo"><a href="#"><img src="./assets/img/wecaning_logo.png" alt="위캐닝"></a></div>
         <nav class="main"><a href="#">서비스 소개</a><a href="#">가격 안내</a><a href="#">고객센터</a></nav>
-        <nav class="utils"><a class="button is-primary" href="#">이용 신청</a>
+        <nav class="utils"><a class="button" href="#">로그인</a><a class="button is-primary" href="#">이용 신청</a>
         </nav>
       </div>
     </header>
@@ -25,14 +25,14 @@
       </div>
     </header>
     <!-- main content-->
-    <aside class="is-hidden-mobile submenu-desktop">
+    <aside class="is-hidden-mobile submenu-desktop is-mypage">
       <ul class="container">
-        <li><a>프로그램소개</a></li>
-        <li class="is-active"><a>신청하기</a></li>
-        <li><a>스마트분석</a></li>
-        <li><a>스마트미션</a></li>
-        <li><a>두뇌유형검사</a></li>
-        <li><a>수학학력평가정답확인/문제풀이</a></li>
+        <li><a>마이페이지</a></li>
+        <li><a>서비스 내역</a></li>
+        <li class="is-active"><a>학습자 관리</a></li>
+        <li><a>문의내역</a></li>
+        <li><a>결제내역</a></li>
+        <li><a>회원정보 수정</a></li>
       </ul>
     </aside>
     <aside class="is-hidden-desktop submenu-mobile">
@@ -73,42 +73,61 @@
     <div class="is-hidden-desktop" id="bottom-tab"> 
       <div class="tab-body"><a><img src="./assets/img/icon_small_home.png"><span>마이페이지</span></a><a><img src="./assets/img/icon_small_mission.png"><span>스마트미션 </span></a><a><img src="./assets/img/icon_small_users.png"><span>학습자관리 </span></a><a><img src="./assets/img/icon_small_cog.png"><span>회원정보수정 </span></a></div>
     </div>
-    <nav class="breadcrumb is-hidden-mobile">
-      <div class="container">
-        <ul>
-          <li><a href="/">홈</a></li>
-          <li><span>자기주도학습역량케어</span></li>
-          <li class="is-active"><span>신청하기</span></li>
-        </ul>
-      </div>
-    </nav>
-    <main class="accounts">
-      <div class="container is-fluid is-half">
-        <h1 class="page-title">신청하기</h1>
-        <div class="message">
-          <div class="message-body">
-            <ol>
-              <li>결제일로 부터 13주 프로그램이 시작되므로 진단 및 케어솔루션 진행이 가능한 시점에 서비스를 신청하여 주세요.</li>
-              <li>결제는 카드결제만 가능합니다.</li>
-              <li>자기주도학습역량케어 진행과정에서 두뇌유형검사(3~4주차), 지능검사(7~8주차), 수학학력평가(11~12주차)가 추가로 제공됩니다.</li>
-              <li>신청 후 취소는 환불정책에 따라  환불액이 정산됩니다.</li>
-            </ol>
-          </div>
+    <main class="mypage">
+      <div class="container is-fluid">
+        <div class="title-bar">
+          <h1 class="page-title">학습자 관리</h1>
         </div>
-        <hr class="is-blank">
-        <h2>서비스정보</h2>
-        <div class="list-info">
-          <ul class="table-list">
-            <li><span class="name">서비스명</span><span class="value">자기주도학습역량케어</span></li>
-            <li><span class="name">서비스기간</span><span class="value">결제일로 부터 13주</span></li>
-            <li><span class="name">제공내용</span><span class="value">자기주도학습역량 진단 +  자기주도학습역량케어솔루션 + 두뇌유형검사 + 지능검사 + 수학학력평가</span></li>
-            <li><span class="name">결제금액</span><span class="value">50,000 원</span></li>
+        <h2> 
+          <div class="text"><span>학습자 목록</span></div>
+        </h2>
+        <ul class="student-list">
+          <li>
+            <div class="no-data">등록된 학습자가 없습니다.</div>
+          </li>
+          <li> 
+            <div class="student">
+              <div class="name">김위캔</div>
+              <div class="gender">(남)</div>
+            </div>
+            <div class="school">
+              <div class="name">연현초등학교</div>
+              <div class="grade">5학년</div>
+            </div>
+            <div class="code"> 
+              <div class="top">학습자코드</div>
+              <div class="bottom">
+                <div class="value">LMZSFQ</div><a class="button is-light">코드복사</a>
+              </div>
+            </div>
+            <div class="buttons"> <a class="button is-small">정보수정</a></div>
+          </li>
+          <li> 
+            <div class="student">
+              <div class="name">김위캔캔</div>
+              <div class="gender">(남)</div>
+            </div>
+            <div class="school">
+              <div class="name">경기도연현초등학교</div>
+              <div class="grade">5학년</div>
+            </div>
+            <div class="code"> 
+              <div class="top">학습자코드</div>
+              <div class="bottom">
+                <div class="value">LMZSFQ</div><a class="button is-light">코드복사</a>
+              </div>
+            </div>
+            <div class="buttons"> <a class="button is-small">정보수정</a></div>
+          </li>
+        </ul>
+        <div class="notice"> 
+          <ul> 
+            <li>위캐닝스마트 서비스 시작시 학습자를 선택하도록 되어 있습니다.</li>
+            <li>서비스신청 후에는 학습자정보를 수정하실 수 없사오니 서비스신청 전 먼저 학습자정보를 등록하여 주시기 바랍니다.</li>
+            <li>학습자등록 후 학습자코드 확인이 가능하며, 스마트분석/두뇌유형검사/지능검사/수학학력평가 진행시에 학습자가 별도 코드로 접속하여 진행이 가능합니다.</li>
           </ul>
         </div>
-        <div class="block has-text-centered">
-          <p class="title is-6">서비스를 신청/결제 하시겠습니까?</p>
-        </div>
-        <div class="buttons is-centered"><a class="button is-primary is-wide">확인</a></div>
+        <div class="buttons is-centered"><a class="button is-link" href="">학습자 등록</a></div>
       </div>
     </main>
     <!-- footer-->
