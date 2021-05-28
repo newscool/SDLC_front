@@ -170,8 +170,8 @@ if(questionList) {
   },)
 }
 
-// 메인 슬라이더
 $(function() {
+  // 메인 슬라이더
   $('.slider').slick({
     dots: true,
     infinite: true,
@@ -180,6 +180,9 @@ $(function() {
     arrows: true,
     speed: 400,
   });
+
+  // aos
+  AOS.init();
 })
 
 // 위캐닝 소개 : breadcrumb add 'is-white'
@@ -189,6 +192,40 @@ if(about) {
     if(item == 'is-about') {
       document.querySelector('.breadcrumb').classList.add('is-white');
     }
+  })
+}
+
+// 위캐닝 소개 : tab menu click event
+const tabMenu = document.querySelectorAll('.tab-menu .item');
+const tabMenuContent = document.querySelectorAll('.tab-menu-content .item');
+const tabMenuImage = document.querySelectorAll('.tab-image');
+
+function removeTabMenuActive(){
+  tabMenu.forEach(item => {
+    item.classList.remove('is-active');
+  })
+}
+function removeTabContentActive(){
+  tabMenuContent.forEach(item => {
+    item.classList.remove('is-active');
+  })
+}
+function removeTabImageActive() {
+  tabMenuImage.forEach(item => {
+    item.classList.remove('is-active');
+  })
+}
+
+if(tabMenu.length > 0) {
+  tabMenu.forEach((item, index) => {
+    item.addEventListener('click', function(e) {
+      removeTabMenuActive();
+      removeTabContentActive();
+      removeTabImageActive();
+      e.target.classList.add('is-active');
+      tabMenuContent[index].classList.add('is-active');
+      tabMenuImage[index].classList.add('is-active');
+    });
   })
 }
 // 서비스 구매 프로세스
